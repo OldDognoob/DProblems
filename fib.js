@@ -50,3 +50,5 @@ console.log(fib(8)); // 21
 console.log(fib(40)); //102334155
 // in the first three runs the computer gives us easy and fast the correct answers
 // however for the largest number is calculating so it means it goes slow takes memory to make the calculations
+
+// with the memoization the return of the largest number is now faster than the previous time.
