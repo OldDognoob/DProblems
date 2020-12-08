@@ -13,12 +13,4 @@
 //5. Lets calculate now gridTraveler(3,3) so we want to travel in a grid with dimensions 3 by 3
 //                
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
