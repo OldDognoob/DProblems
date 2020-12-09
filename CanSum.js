@@ -9,7 +9,9 @@
 
 // Methodology Approach
 
-const canSum = (targetSum, numbers) => {
+const canSum = (targetSum, numbers, memo={}) => {
+    // i m asking my self if the targetSum is in the memo store
+    if(targetSum in memo) return memo[targetSum];
     // the function will be zero when I reach the zero by talking no numbers from the array
 if (targetSum === 0) return true;
 // adding this case scenario because in our tree we found out that there are nods we cant move any more
@@ -29,12 +31,14 @@ for(let num of numbers){
 
     // it actually saying in line 28 , if it is possible to generate the remainder
     // by using the numbers of the array then we can return true for the largest problem in line 12
-    if (canSum(remainder, numbers) === true){
+    if (canSum(remainder, numbers, memo) === true){
+        memo[targetSum]= true;
         return true;
     }
 }
 // i m returning false here because I attempt earlier to calculate all the possibilities
 // and then I found out that it is impossible to generate the targetSum.
+memo[targetSum] = false;
 return false;
 };
 
