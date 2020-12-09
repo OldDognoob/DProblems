@@ -9,3 +9,16 @@
 //Methodology Approach
 // This exercise is almost the same but here I want to return a combination of numbers 
 // that leads to the targetSum.
+
+const howSum = (targetSum, numbers)=>{
+    if(targetSum === 0)return [];
+    if(targetSum < 0) return null;
+
+    for(let num of numbers){
+        const remainder = targetSum - num;
+        const remainderResult = howSum(remainder, numbers);
+        if (remainderResult !== null){
+            return [...remainderResult, num ];
+        }
+    }
+};
